@@ -1,0 +1,46 @@
+<mat-toolbar>
+  <button mat-icon-button *ngIf="sidenav.mode ==='over'" (click)="sidenav.toggle()">
+    <mat-icon *ngIf="!sidenav.opened">menu</mat-icon>
+    <mat-icon *ngIf="sidenav.opened">close</mat-icon>
+  </button>
+  <img class="title-image" src="assets/images/ypd.png" alt="YPD">
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav = "matSidenav">
+    <button mat-button class="menu-button">
+      <mat-icon class="menu-icon" svgIcon="shirtIcon"></mat-icon>
+    </button>
+    <mat-divider></mat-divider>
+
+    <button mat-button class="menu-button">
+      <mat-icon class="menu-icon" svgIcon="cardIcon"></mat-icon>
+    </button>
+    <mat-divider></mat-divider>
+
+    <button mat-button class="menu-button">
+      <mat-icon class="menu-icon" svgIcon="personIcon"></mat-icon>
+    </button>
+    <mat-divider></mat-divider>
+
+    <button mat-button class="menu-button">
+      <mat-icon class="menu-icon" svgIcon="imageIcon"></mat-icon>
+    </button>
+    <mat-divider></mat-divider>
+
+    <button mat-button class="menu-button">
+      <mat-icon class="menu-icon" svgIcon="infoIcon"></mat-icon>
+    </button>
+    <mat-divider></mat-divider>
+
+    <button mat-button class="menu-button">
+      <mat-icon class="menu-icon" svgIcon="mailIcon"></mat-icon>
+    </button>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <div class="content mat-elevation-z4">
+      Main content
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
